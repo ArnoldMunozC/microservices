@@ -1,5 +1,5 @@
 {{- /*
-Copyright VMware, Inc.
+Copyright Broadcom, Inc. All Rights Reserved.
 SPDX-License-Identifier: APACHE-2.0
 */}}
 
@@ -98,7 +98,7 @@ spec:
           args: {{- include "common.tplvalues.render" (dict "value" .Values.provisioning.args "context" $) | nindent 12 }}
           {{- else }}
           args:
-            - -ec
+            - -efc
             - |
               echo "Configuring environment"
               . /opt/bitnami/scripts/libkafka.sh

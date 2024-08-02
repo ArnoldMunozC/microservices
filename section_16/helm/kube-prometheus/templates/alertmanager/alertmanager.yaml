@@ -1,5 +1,5 @@
 {{- /*
-Copyright VMware, Inc.
+Copyright Broadcom, Inc. All Rights Reserved.
 SPDX-License-Identifier: APACHE-2.0
 */}}
 
@@ -18,6 +18,7 @@ spec:
   serviceAccountName: {{ template "kube-prometheus.alertmanager.serviceAccountName" . }}
   {{- if .Values.alertmanager.image }}
   image: {{ template "kube-prometheus.alertmanager.image" . }}
+  imagePullPolicy: {{ .Values.alertmanager.image.pullPolicy }}
   {{- end }}
   listenLocal: {{ .Values.alertmanager.listenLocal }}
   {{- if index .Values.alertmanager "externalUrl" }}
@@ -32,6 +33,12 @@ spec:
   logFormat: {{ .Values.alertmanager.logFormat }}
   logLevel: {{ .Values.alertmanager.logLevel }}
   retention: {{ .Values.alertmanager.retention }}
+  {{- if .Values.alertmanager.enableFeatures }}
+  enableFeatures:
+    {{- range .Values.alertmanager.enableFeatures }}
+    - {{ . | quote }}
+    {{- end }}
+  {{- end }}
   {{- if .Values.alertmanager.secrets }}
   secrets: {{- include "common.tplvalues.render" (dict "value" .Values.alertmanager.secrets "context" $) | nindent 4 }}
   {{- end }}
@@ -112,7 +119,7 @@ spec:
     {{- if .Values.alertmanager.volumeMounts }}
     {{- include "common.tplvalues.render" (dict "value" .Values.alertmanager.volumeMounts "context" $) | nindent 4 }}
     {{- end }}
-{{- include "kube-prometheus.imagePullSecrets" . | indent 2 }}
+{{- include "kube-prometheus.imagePullSecrets" . | nindent 2 }}
   {{- if or .Values.alertmanager.containers .Values.alertmanager.containerSecurityContext.enabled .Values.operator.prometheusConfigReloader.containerSecurityContext.enabled }}
   containers:
     {{- if or .Values.alertmanager.containerSecurityContext.enabled .Values.alertmanager.livenessProbe.enabled .Values.alertmanager.readinessProbe.enabled }}
