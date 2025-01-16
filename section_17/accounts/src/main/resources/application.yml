@@ -52,7 +52,7 @@ management:
       enabled: true
   endpoint:
     shutdown:
-      enabled: true
+      access: unrestricted
     health:
       probes:
         enabled: true
@@ -63,9 +63,6 @@ management:
     tags:
       application: ${spring.application.name}
 
-endpoints:
-  shutdown:
-    enabled: true
 
 info:
   app:

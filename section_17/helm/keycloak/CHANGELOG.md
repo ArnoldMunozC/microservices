@@ -1,8 +1,145 @@
 # Changelog
 
+## 24.4.3 (2025-01-14)
+
+* [bitnami/keycloak] Release 24.4.3 ([#31369](https://github.com/bitnami/charts/pull/31369))
+
+## <small>24.4.2 (2025-01-13)</small>
+
+* [bitnami/keycloak] Release 24.4.2 (#31340) ([e81606c](https://github.com/bitnami/charts/commit/e81606cb05043717405bc44e97e41b12dfe9992a)), closes [#31340](https://github.com/bitnami/charts/issues/31340)
+
+## <small>24.4.1 (2025-01-12)</small>
+
+* [bitnami/keycloak] Release 24.4.1 (#31305) ([24fc9ab](https://github.com/bitnami/charts/commit/24fc9abfdbb376fe367345c367fdd433d0ec1bde)), closes [#31305](https://github.com/bitnami/charts/issues/31305)
+
+## 24.4.0 (2025-01-10)
+
+* [bitnami/keycloak] add option to use dedicated version bound headless service for jgroups discovery  ([d1a8d92](https://github.com/bitnami/charts/commit/d1a8d923c78fb5d170267ef8554ae47c29864f59)), closes [#31271](https://github.com/bitnami/charts/issues/31271) [#31072](https://github.com/bitnami/charts/issues/31072)
+
+## <small>24.3.2 (2024-12-30)</small>
+
+* [bitnami/*] Fix typo in README (#31052) ([b41a51d](https://github.com/bitnami/charts/commit/b41a51d1bd04841fc108b78d3b8357a5292771c8)), closes [#31052](https://github.com/bitnami/charts/issues/31052)
+* [bitnami/keycloak] Update KEYCLOAK_ADMIN env variables deprecation (#30636) ([668bd27](https://github.com/bitnami/charts/commit/668bd2772c5ea45af7b1b57141c1776ccf4169f4)), closes [#30636](https://github.com/bitnami/charts/issues/30636)
+
+## <small>24.3.1 (2024-12-16)</small>
+
+* [bitnami/keycloak] KEYCLOAK_HOSTNAME present even if KEYCLOAK_PROXY_HEADERS is set (#30368) ([80b1bc3](https://github.com/bitnami/charts/commit/80b1bc3db52748c242a43a37ac9573eed311e6df)), closes [#30368](https://github.com/bitnami/charts/issues/30368)
+
+## 24.3.0 (2024-12-10)
+
+* [bitnami/*] Add Bitnami Premium to NOTES.txt (#30854) ([3dfc003](https://github.com/bitnami/charts/commit/3dfc00376df6631f0ce54b8d440d477f6caa6186)), closes [#30854](https://github.com/bitnami/charts/issues/30854)
+* [bitnami/keycloak] Detect non-standard images (#30902) ([6ee9c49](https://github.com/bitnami/charts/commit/6ee9c49966c3ff9d1f1d0fa05278d36a2e45af8e)), closes [#30902](https://github.com/bitnami/charts/issues/30902)
+
+## <small>24.2.3 (2024-12-03)</small>
+
+* [bitnami/*] docs: :memo: Add "Backup & Restore" section (#30711) ([35ab536](https://github.com/bitnami/charts/commit/35ab5363741e7548f4076f04da6e62d10153c60c)), closes [#30711](https://github.com/bitnami/charts/issues/30711)
+* [bitnami/*] docs: :memo: Add "Prometheus metrics" (batch 3) (#30666) ([82fc7e2](https://github.com/bitnami/charts/commit/82fc7e2fc12e2648ed22069942203c02bf5d4cc6)), closes [#30666](https://github.com/bitnami/charts/issues/30666)
+* [bitnami/*] docs: :memo: Add "Update Credentials" (batch 2) (#30687) ([c457848](https://github.com/bitnami/charts/commit/c457848b2a111aad59830b98f85ffa1e29918e10)), closes [#30687](https://github.com/bitnami/charts/issues/30687)
+* [bitnami/*] docs: :memo: Unify "Securing Traffic using TLS" section (#30707) ([b572333](https://github.com/bitnami/charts/commit/b57233336e4fe9af928ecb4f2a5f334011efb1bc)), closes [#30707](https://github.com/bitnami/charts/issues/30707)
+* [bitnami/keycloak] Release 24.2.3 (#30726) ([c163f68](https://github.com/bitnami/charts/commit/c163f689ad6c765c5b8d138ca597d85ab8402d14)), closes [#30726](https://github.com/bitnami/charts/issues/30726)
+
+## <small>24.2.2 (2024-11-22)</small>
+
+* [bitnami/*] docs: fix copy-paste typos with wrong references to Airflow (#30541) ([0a225d4](https://github.com/bitnami/charts/commit/0a225d44c1969429573b4e2630068eff129b6a96)), closes [#30541](https://github.com/bitnami/charts/issues/30541)
+* [bitnami/keycloak] Release 24.2.2 (#30576) ([c3f8e59](https://github.com/bitnami/charts/commit/c3f8e596428f2f546dd3479570e7d39958b16f3b)), closes [#30576](https://github.com/bitnami/charts/issues/30576)
+
+## <small>24.2.1 (2024-11-19)</small>
+
+* [bitnami/keycloak] Release 24.2.1 (#30522) ([6702319](https://github.com/bitnami/charts/commit/670231902a194d5585ab06283e45592353b07142)), closes [#30522](https://github.com/bitnami/charts/issues/30522)
+
+## 24.2.0 (2024-11-12)
+
+* [bitnami/keycloak] Fix metrics ports and servicemonitor (#30303) ([c289b97](https://github.com/bitnami/charts/commit/c289b97caddc8e511e00d46937b508204f41de9a)), closes [#30303](https://github.com/bitnami/charts/issues/30303)
+
+## 24.1.0 (2024-11-06)
+
+* [bitnami/keycloak] switches keycloak-metrics service to point to new port (#30095) ([8ca86ae](https://github.com/bitnami/charts/commit/8ca86ae9ecb2b375735787001188e5c7757d181b)), closes [#30095](https://github.com/bitnami/charts/issues/30095)
+
+## <small>24.0.5 (2024-11-04)</small>
+
+* [bitnami/keycloak] Added providers to the list of writable dirs (#29998) ([9de041c](https://github.com/bitnami/charts/commit/9de041c92e2788a108631052aa5401a9469e3592)), closes [#29998](https://github.com/bitnami/charts/issues/29998)
+
+## <small>24.0.4 (2024-11-01)</small>
+
+* [bitnami/keycloak] Release 24.0.4 (#30169) ([701a2b9](https://github.com/bitnami/charts/commit/701a2b96d7eff0b3d0c8a77c1ac14f24e0d3ccda)), closes [#30169](https://github.com/bitnami/charts/issues/30169)
+
+## <small>24.0.3 (2024-10-31)</small>
+
+* [bitnami/*] Remove wrong comment about imagePullPolicy (#30107) ([a51f9e4](https://github.com/bitnami/charts/commit/a51f9e4bb0fbf77199512d35de7ac8abe055d026)), closes [#30107](https://github.com/bitnami/charts/issues/30107)
+* [bitnami/keycloak] Release 24.0.3 (#30147) ([1cec61e](https://github.com/bitnami/charts/commit/1cec61e327d14d3be91ca06357bc68ddcafeceb7)), closes [#30147](https://github.com/bitnami/charts/issues/30147)
+
+## <small>24.0.2 (2024-10-24)</small>
+
+* [bitnami/keycloak] Release 24.0.2 (#30075) ([d86c1ee](https://github.com/bitnami/charts/commit/d86c1eedb774206f0eaeb191ad34551764be498b)), closes [#30075](https://github.com/bitnami/charts/issues/30075)
+
+## <small>24.0.1 (2024-10-17)</small>
+
+* [bitnami/keycloak] Release 24.0.1 (#29968) ([fa1d5b2](https://github.com/bitnami/charts/commit/fa1d5b278cb43b38fd5105a94005ba9a840beacc)), closes [#29968](https://github.com/bitnami/charts/issues/29968)
+* Update documentation links to techdocs.broadcom.com (#29931) ([f0d9ad7](https://github.com/bitnami/charts/commit/f0d9ad78f39f633d275fc576d32eae78ded4d0b8)), closes [#29931](https://github.com/bitnami/charts/issues/29931)
+
+## 24.0.0 (2024-10-08)
+
+* [bitnami/keycloak] Release 24.0.0 (#29815) ([02bf8f8](https://github.com/bitnami/charts/commit/02bf8f8821a875ca3605705f9c092a077ef29772)), closes [#29815](https://github.com/bitnami/charts/issues/29815)
+
+## 23.0.0 (2024-10-03)
+
+* [bitnami/keycloak] feat!: :arrow_up: :boom: Bump PostgreSQL to 17.x (#29735) ([8ce695d](https://github.com/bitnami/charts/commit/8ce695d44b25e3e2023c07961c66ae5b7b22ce4b)), closes [#29735](https://github.com/bitnami/charts/issues/29735)
+
+## <small>22.2.6 (2024-09-19)</small>
+
+* [bitnami/keycloak] Release 22.2.6 (#29542) ([754f9e2](https://github.com/bitnami/charts/commit/754f9e2365ab6d0786a997e4d582e2b6ce92c237)), closes [#29542](https://github.com/bitnami/charts/issues/29542)
+
+## <small>22.2.5 (2024-09-16)</small>
+
+* [bitnami/keycloak] Release 22.2.5 (#29449) ([704c76c](https://github.com/bitnami/charts/commit/704c76cb715c58a196407ad471b150e9a0148cf3)), closes [#29449](https://github.com/bitnami/charts/issues/29449)
+
+## <small>22.2.4 (2024-09-13)</small>
+
+* [bitnami/keycloak] Fix app-volume-dir mount path (#29397) ([665ea7c](https://github.com/bitnami/charts/commit/665ea7c362ca091d028320a62ae40891c319e223)), closes [#29397](https://github.com/bitnami/charts/issues/29397)
+
+## <small>22.2.3 (2024-09-10)</small>
+
+* [bitnami/keycloak] Release 22.2.3 (#29320) ([d392ad9](https://github.com/bitnami/charts/commit/d392ad9a93c9213a27b4d74575efac80dd1d7ee8)), closes [#29320](https://github.com/bitnami/charts/issues/29320)
+
+## <small>22.2.2 (2024-09-09)</small>
+
+* [bitnami/keycloak] Specify which keys must the secret have for jks in values.yaml comments (#29301) ([5287334](https://github.com/bitnami/charts/commit/5287334f451638971f6bbf59c8d3f57928aa00a3)), closes [#29301](https://github.com/bitnami/charts/issues/29301)
+
+## <small>22.2.1 (2024-08-26)</small>
+
+* [bitnami/keycloak] fix: :bug: Add emptyDir at /bitnami to allow init scripts (#29020) ([3d04a65](https://github.com/bitnami/charts/commit/3d04a655e59ce25587d84b1a2a44844dfcf19de3)), closes [#29020](https://github.com/bitnami/charts/issues/29020)
+
+## 22.2.0 (2024-08-26)
+
+* [bitnami/keycloak] Use database user secret key from PostgreSQL chart (#29008) ([bf7ea4a](https://github.com/bitnami/charts/commit/bf7ea4a17dbe47ea0171dfae8415c4d035e7c8ad)), closes [#29008](https://github.com/bitnami/charts/issues/29008)
+
+## <small>22.1.3 (2024-08-22)</small>
+
+* [bitnami/keycloak] Release 22.1.3 (#28984) ([bb21c84](https://github.com/bitnami/charts/commit/bb21c84c422bdef42fad01db0252798d33e3499d)), closes [#28984](https://github.com/bitnami/charts/issues/28984)
+
+## <small>22.1.2 (2024-08-19)</small>
+
+* [bitnami/keycloak] Release 22.1.2 (#28929) ([0ab3f3a](https://github.com/bitnami/charts/commit/0ab3f3a85f1ecbcf558977de0c5f584de495b1e4)), closes [#28929](https://github.com/bitnami/charts/issues/28929)
+
+## <small>22.1.1 (2024-08-13)</small>
+
+* [bitnami/keycloak] move hostname variables to config map to allow override (#28838) ([f919441](https://github.com/bitnami/charts/commit/f9194415ccfa5e6a06007e9bf24376a02b20bb05)), closes [#28838](https://github.com/bitnami/charts/issues/28838)
+
+## 22.1.0 (2024-08-06)
+
+* [bitnami/keycloak] use hostname v2 options (#28611) ([559b860](https://github.com/bitnami/charts/commit/559b8604bb021798592ee276e9553d80d0735bbf)), closes [#28611](https://github.com/bitnami/charts/issues/28611)
+
+## <small>22.0.2 (2024-08-06)</small>
+
+* [bitnami/keycloak] Release 22.0.2 (#28692) ([af28509](https://github.com/bitnami/charts/commit/af285099f496589b4d3ad8379c00ae96628baab5)), closes [#28692](https://github.com/bitnami/charts/issues/28692)
+
+## <small>22.0.1 (2024-08-06)</small>
+
+* [bitnami/keycloak] Preserve data on writable dirs (#28550) ([80bc148](https://github.com/bitnami/charts/commit/80bc148b1af4e75ff8619c68f20ec2be90015a37)), closes [#28550](https://github.com/bitnami/charts/issues/28550)
+
 ## 22.0.0 (2024-07-29)
 
-* [bitnami/keycloak] Release 22.0.0 ([#28563](https://github.com/bitnami/charts/pull/28563))
+* [bitnami/keycloak] Release 22.0.0 (#28563) ([81162c4](https://github.com/bitnami/charts/commit/81162c45a2a9759ac00ae26ad0bb5310af4597e4)), closes [#28563](https://github.com/bitnami/charts/issues/28563)
 
 ## 21.8.0 (2024-07-26)
 
