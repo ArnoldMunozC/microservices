@@ -10,7 +10,6 @@
 ## @param global.imageRegistry Global Docker image registry
 ## @param global.imagePullSecrets Global Docker registry secret names as an array
 ## @param global.defaultStorageClass Global default StorageClass for Persistent Volume(s)
-## @param global.storageClass DEPRECATED: use global.defaultStorageClass instead
 ##
 global:
   imageRegistry: ""
@@ -20,7 +19,11 @@ global:
   ##
   imagePullSecrets: []
   defaultStorageClass: ""
-  storageClass: ""
+  ## Security parameters
+  ##
+  security:
+    ## @param global.security.allowInsecureImages Allows skipping image verification
+    allowInsecureImages: false
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
@@ -75,10 +78,9 @@ operator:
   image:
     registry: docker.io
     repository: bitnami/prometheus-operator
-    tag: 0.75.2-debian-12-r1
+    tag: 0.79.2-debian-12-r0
     digest: ""
     ## Specify a imagePullPolicy
-    ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
     ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
     ##
     pullPolicy: IfNotPresent
@@ -636,7 +638,7 @@ prometheus:
   image:
     registry: docker.io
     repository: bitnami/prometheus
-    tag: 2.53.1-debian-12-r1
+    tag: 2.55.1-debian-12-r4
     digest: ""
     pullPolicy: IfNotPresent
     ## Optionally specify an array of imagePullSecrets.
@@ -1182,6 +1184,10 @@ prometheus:
   ## See https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#namespaceselector for usage
   ##
   scrapeConfigNamespaceSelector: {}
+  ## @param prometheus.scrapeClasses List of scrape classes to expose to scraping objects
+  ## See https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#scrapeclass for usage
+  ##
+  scrapeClasses: []
   ## @param prometheus.retention Metrics retention days
   ##
   retention: 10d
@@ -1454,9 +1460,8 @@ prometheus:
     image:
       registry: docker.io
       repository: bitnami/thanos
-      tag: 0.35.1-debian-12-r4
+      tag: 0.37.2-debian-12-r0
       digest: ""
-      ## Specify a imagePullPolicy. Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
       ## ref: https://kubernetes.io/docs/concepts/containers/images/#pre-pulled-images
       ##
       pullPolicy: IfNotPresent
@@ -1519,6 +1524,22 @@ prometheus:
     objectStorageConfig:
       secretName: ""
       secretKey: thanos.yaml
+    ## @param prometheus.thanos.extraEnvVars Array with extra environment variables to add to the thanos sidecar container
+    ## For example:
+    ## extraEnvVars:
+    ##  - name: REQUEST_LOGGING_CONFIG
+    ##    valueFrom:
+    ##      secretKeyRef:
+    ##        name: thanos-request-logging-config
+    ##        key: request-logging-config.yml
+    ##
+    extraEnvVars: []
+    ## @param prometheus.thanos.extraEnvVarsCM Name of existing ConfigMap containing extra env vars for the thanos sidecar container
+    ##
+    extraEnvVarsCM: ""
+    ## @param prometheus.thanos.extraEnvVarsSecret Name of existing Secret containing extra env vars for the thanos sidecar container
+    ##
+    extraEnvVarsSecret: ""
     ## ref: https://github.com/thanos-io/thanos/blob/main/docs/components/sidecar.md
     ## @param prometheus.thanos.extraVolumeMounts Additional volumeMounts from `prometheus.volumes` for thanos sidecar container
     ## extraVolumeMounts:
@@ -1868,7 +1889,7 @@ alertmanager:
   image:
     registry: docker.io
     repository: bitnami/alertmanager
-    tag: 0.27.0-debian-12-r17
+    tag: 0.27.0-debian-12-r28
     digest: ""
     pullPolicy: IfNotPresent
     ## Optionally specify an array of imagePullSecrets.
@@ -2557,7 +2578,7 @@ blackboxExporter:
   image:
     registry: docker.io
     repository: bitnami/blackbox-exporter
-    tag: 0.25.0-debian-12-r12
+    tag: 0.25.0-debian-12-r21
     digest: ""
     pullPolicy: IfNotPresent
     ## Optionally specify an array of imagePullSecrets.
